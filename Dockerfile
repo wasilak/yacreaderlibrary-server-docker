@@ -1,5 +1,6 @@
-ARG ARCH=amd64
 FROM debian:bullseye
+
+ARG ARCH=amd64
 
 ENV YACREADER_VERSION 9.8.2
 
