@@ -1,11 +1,11 @@
 FROM debian:bullseye
 
-ARG ARCH=amd64
+ARG TARGETARCH
 
 ENV YACREADER_VERSION 9.8.2
 
 ENV TINI_VERSION v0.19.0
-ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-${ARCH} /tini
+ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-${TARGETARCH} /tini
 RUN chmod +x /tini
 ENTRYPOINT ["/tini", "--"]
 
