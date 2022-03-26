@@ -6,8 +6,8 @@ ENV YACREADER_VERSION 9.8.2
 
 ENV TINI_VERSION v0.19.0
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-${ARCH} /tini
-RUN chmod +x /tini-${ARCH}
-ENTRYPOINT ["/tini-${ARCH}", "--"]
+RUN chmod +x /tini
+ENTRYPOINT ["/tini", "--"]
 
 WORKDIR /src/git
 
